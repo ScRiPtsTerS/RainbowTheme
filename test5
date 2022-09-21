@@ -1,13 +1,13 @@
 local Kavo = {}
 
-local rainbow = true
-RGB = 0
-while rainbow == true do
-    RGB = RGB + 10
-    wait(0.1)
-    if RGB == 255 then
-        RGB = 0
-    end
+function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+counter = 0
+
+while wait(0.1)do
+ script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+ 
+ counter = counter + 0.01
 end
 
 local tween = game:GetService("TweenService")
@@ -139,9 +139,9 @@ local themeStyles = {
     Premhub = {
         SchemeColor = Color3.fromRGB(1, 1, 1),
         Background = Color3.fromRGB(1, 1, 1),
-        Header = Color3.fromRGB(RGB, RGB, RGB),
-        TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(RGB, RGB, RGB)
+        Header = Color3.fromRGB(counter, counter, counter),
+        TextColor = Color3.fromRGB(255, 255, 255),
+        ElementColor = Color3.fromRGB(counter, counter, counter)
     }
 }
 local oldTheme = ""
