@@ -11,12 +11,6 @@ function rainbow()
     end
 end
 
-if _G.Gay == true then
-   repeat
-    rainbow()
-   until RGB == 1000
-end
-
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
 local input = game:GetService("UserInputService")
@@ -2667,6 +2661,11 @@ function Kavo.CreateLib(kavName, themeList)
                 function labelFunctions:UpdateLabel(newText)
                 	if label.Text ~= "  "..newText then
                 		label.Text = "  "..newText
+			if _G.Gay == true then
+   repeat
+    rainbow()
+   until RGB == 1000
+end
                 	end
                 end	
                 return labelFunctions
