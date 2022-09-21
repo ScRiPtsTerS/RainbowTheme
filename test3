@@ -139,9 +139,9 @@ local themeStyles = {
     Premhub = {
         SchemeColor = Color3.fromRGB(1, 1, 1),
         Background = Color3.fromRGB(1, 1, 1),
-        Header = Color3.fromRGB(rainbow, rainbow, rainbow),
+        Header = Color3.fromRGB(RGB, RGB, RGB),
         TextColor = Color3.fromRGB(255,255,255),
-        ElementColor = Color3.fromRGB(rainbow, rainbow, rainbow)
+        ElementColor = Color3.fromRGB(RGB, RGB, RGB)
     }
 }
 local oldTheme = ""
