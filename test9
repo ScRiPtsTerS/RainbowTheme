@@ -1,19 +1,13 @@
 local Kavo = {}
 
-if themeList == "Premhub" then
-    rainbow = true
-    if rainbow == true then
-        repeat
-            RGB = (math.random(1, 255))
-        until RGB == 255
-    elseif themeList == themeStyles.Premhub then
-        repeat
-            RGB = (math.random(1, 255))
-            if RGB == 255 then
-                RGB = 0
-            end
-        until RGB == 300
-    end
+function rainbow()
+    repeat
+        RGB = (math.random(1, 255))
+        wait(0.4)
+        if RGB == 255 then
+            RGB = 0
+        end
+    until RGB == 300
 end
 
 local tween = game:GetService("TweenService")
@@ -2666,6 +2660,8 @@ function Kavo.CreateLib(kavName, themeList)
                 function labelFunctions:UpdateLabel(newText)
                 	if label.Text ~= "  "..newText then
                 		label.Text = "  "..newText
+                        print(RGB)
+                        rainbow()
                 	end
                 end	
                 return labelFunctions
