@@ -1,11 +1,12 @@
 local Kavo = {}
 
-function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-
-counter = 0
-
-while wait(0.1)do
- counter = counter + 0.01
+if themeList == "Premhub" then
+    rainbow = true
+    if rainbow == true then
+        repeat
+            RGB = (math.random(1, 255))
+        until RGB == 255
+    end
 end
 
 local tween = game:GetService("TweenService")
@@ -137,9 +138,9 @@ local themeStyles = {
     Premhub = {
         SchemeColor = Color3.fromRGB(1, 1, 1),
         Background = Color3.fromRGB(1, 1, 1),
-        Header = Color3.fromRGB(counter, counter, counter),
-        TextColor = Color3.fromRGB(255, 255, 255),
-        ElementColor = Color3.fromRGB(counter, counter, counter)
+        Header = Color3.fromRGB(RGB, RGB, RGB),
+        TextColor = Color3.fromRGB(255,255,255),
+        ElementColor = Color3.fromRGB(RGB, RGB, RGB)
     }
 }
 local oldTheme = ""
