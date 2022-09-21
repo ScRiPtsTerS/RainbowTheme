@@ -1,13 +1,14 @@
 local Kavo = {}
 
 function rainbow()
-    repeat
+    anything = true
+    while true do
         RGB = (math.random(1, 255))
         wait(0.4)
         if RGB == 255 then
-            RGB = 0
+        RGB = 0
         end
-    until RGB == 300
+    end
 end
 
 local tween = game:GetService("TweenService")
