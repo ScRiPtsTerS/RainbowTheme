@@ -1,16 +1,14 @@
 local Kavo = {}
 
-local rainbow = 0
-if rainbow == 0 then
-    repeat
-        rainbow = rainbow + 10
-        wait(0.1)
-    until rainbow == 255
+local rainbow = true
+local RGB = 0
+while rainbow == true do
+    RGB = RGB + 10
+    wait(0.1)
+    if RGB == 255 then
+        RGB = 0
+    end
 end
-
-if rainbow == 255 then
-    rainbow = 0
-end 
 
 local tween = game:GetService("TweenService")
 local tweeninfo = TweenInfo.new
