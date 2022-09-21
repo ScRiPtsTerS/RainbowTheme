@@ -12,7 +12,9 @@ function rainbow()
 end
 
 if _G.Gay == true then
-   rainbow()
+   repeat
+    rainbow()
+   until RGB = 1000
 end
 
 local tween = game:GetService("TweenService")
