@@ -1,17 +1,18 @@
 local Kavo = {}
 
-rainbow()
+_G.Gay = true
 
 function rainbow()
-    anything = true
-    while true do
         RGB = (math.random(1, 255))
         print(RGB)
         wait(0.4)
         if RGB == 255 then
         RGB = 0
-        end
     end
+end
+
+if _G.Gay == true then
+   rainbow()
 end
 
 local tween = game:GetService("TweenService")
