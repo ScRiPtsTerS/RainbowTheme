@@ -1,7 +1,7 @@
 local Kavo = {}
 
 local rainbow = true
-local RGB = 0
+RGB = 0
 while rainbow == true do
     RGB = RGB + 10
     wait(0.1)
